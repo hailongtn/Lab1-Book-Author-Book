@@ -1,0 +1,120 @@
+Đề Bài Tập Lab: Quản lý Author – Book (Many-to-Many với MySQL & ASP.NET Core)
+Mục tiêu
+Vận dụng ASP.NET Core Web API và Entity Framework Core để xây dựng ứng dụng CRUD.
+
+
+Hiểu và thực hành quan hệ Many-to-Many giữa hai thực thể.
+
+
+Thực hiện thao tác Migration, tạo CSDL MySQL và kiểm thử bằng Swagger/Postman.
+
+
+
+Yêu cầu chi tiết
+Chuẩn bị môi trường
+
+
+Cài đặt .NET 6/7/8 SDK.
+
+
+Cài đặt MySQL (hoặc chạy bằng Docker).
+
+
+Tạo cơ sở dữ liệu mới tên authorbookdb.
+
+
+Tạo project API
+
+
+Tạo project ASP.NET Core Web API đặt tên: AuthorBookApi.
+
+
+Cài đặt gói hỗ trợ EF Core cho MySQL.
+
+
+Xây dựng mô hình dữ liệu
+
+
+Tạo hai thực thể:
+
+
+Author (thuộc tính: AuthorId, Name)
+
+
+Book (thuộc tính: BookId, Title)
+
+
+Xác định quan hệ Many-to-Many giữa Author và Book thông qua bảng trung gian AuthorBooks.
+
+
+Cấu hình DbContext
+
+
+Tạo class DbContext kết nối tới MySQL.
+
+
+Định nghĩa các DbSet cho Authors, Books.
+
+
+Thiết lập quan hệ Many-to-Many để EF Core tự động tạo bảng AuthorBooks.
+
+
+Migration & Database
+
+
+Tạo Migration khởi tạo.
+
+
+Áp dụng migration để tạo các bảng trong MySQL.
+
+
+Kiểm tra lại trong MySQL Workbench / CLI xem các bảng đã tạo đúng chưa.
+
+
+Xây dựng API CRUD
+
+
+Endpoint tạo mới Author.
+
+
+Endpoint tạo mới Book.
+
+
+Endpoint gắn một Book cho một Author.
+
+
+Endpoint lấy danh sách Authors kèm theo Books.
+
+
+(Tùy chọn nâng cao): Endpoint lấy danh sách Books kèm theo Authors.
+
+
+Kiểm thử API
+
+
+Sử dụng Swagger hoặc Postman để:
+
+
+Tạo ít nhất 2 tác giả, 3 cuốn sách.
+
+
+Gắn mỗi tác giả với ít nhất 2 cuốn sách.
+
+
+Gọi API để hiển thị danh sách tác giả và kiểm tra danh sách sách đi kèm.
+
+
+Báo cáo nộp bài
+
+
+Mã nguồn project (không cần nặng phần UI).
+
+
+Screenshot kết quả chạy Migration (bảng trong MySQL).
+
+
+Screenshot test API (Swagger/Postman).
+
+
+5–7 dòng mô tả ngắn gọn cách thiết kế quan hệ Many-to-Many trong EF Core.
+
